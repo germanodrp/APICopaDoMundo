@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "754PBVmp2yLH25POkE5puijX5QMX5+jgSYpKPJoNBbQ+19/1KDnUr4RFuvXVmESoCvl6sKtIkfpCxkg8Pk/ogA==",
+  "dgSpecHash": "L2qvm97SYzs3j3VOHt/mPSqDszhtdlOsUEbVeAmP4OOI0VbLB0yJL5wY3UpQffvulNHRthizcJhwxSVnzmSEeg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lojs\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\lojs\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\lojs\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\lojs\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\lojs\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
