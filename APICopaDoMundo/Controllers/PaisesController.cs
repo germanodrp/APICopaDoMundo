@@ -5,15 +5,32 @@ using System.Collections.Generic;
 
 namespace APICopaDoMundo.Controllers 
 {
+
+
     [Route("api/paisescontroller")]
     [ApiController]
     public class PaisesController : ControllerBase
     {
+
+        private readonly Context contexto;
+
+        public PaisesController()
+        {
+            contexto = new Context();
+        }
+
         [HttpGet("obterPaisesPorConfederacao")]
         public ActionResult obterPaisesPorConfederacao()
         {
-            var ObterPaisesPorConfederacao = new List<Paises>();
-            return Ok(ObterPaisesPorConfederacao);
+            try
+            {
+                var ObterPaisesPorConfederacao = new List<Paises>();
+                return Ok(ObterPaisesPorConfederacao);
+            }
+            catch
+            {
+                return BadRequest();
+            }
      
         }
 
@@ -31,7 +48,10 @@ namespace APICopaDoMundo.Controllers
             }
            
         }
-        
+
+
+
+
         //[HttpDelete("remover")]
         //public ActionResult remova(string id)
         //{
