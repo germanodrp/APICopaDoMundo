@@ -3,7 +3,7 @@ using APICopaDoMundo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace APICopaDoMundo.Controllers 
+namespace APICopaDoMundo.Controllers
 {
 
 
@@ -19,20 +19,22 @@ namespace APICopaDoMundo.Controllers
             contexto = new Context();
         }
 
-        [HttpGet("obterPaisesPorConfederacao")]
-        public ActionResult obterPaisesPorConfederacao()
-        {
-            try
-            {
-                var ObterPaisesPorConfederacao = new List<Paises>();
-                return Ok(ObterPaisesPorConfederacao);
-            }
-            catch
-            {
-                return BadRequest();
-            }
-     
-        }
+        //[HttpGet("obterPaisesPorConfederacao")]
+        //public ActionResult obterPaisesPorConfederacao()
+        //{
+        //    try
+        //    {
+
+        //        var paises = Paises;
+        //        return Ok();
+
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
+
+        //}
 
         [HttpGet("obterPaises")]
         public ActionResult ObterPaises()
@@ -40,13 +42,13 @@ namespace APICopaDoMundo.Controllers
             try
             {
                 var obterPaises = new List<Paises>();
-                return Ok (obterPaises);
+                return Ok(obterPaises);
             }
             catch
             {
                 return BadRequest("Erro");
             }
-           
+
         }
 
 
