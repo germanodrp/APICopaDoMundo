@@ -5891,19 +5891,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lojs\\.nuget\\packages\\": {}
+    "C:\\Users\\visualstudio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+      "projectUniqueName": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
       "projectName": "APICopaDoMundo",
-      "projectPath": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
-      "packagesPath": "C:\\Users\\lojs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\obj\\",
+      "projectPath": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+      "packagesPath": "C:\\Users\\visualstudio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lojs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\visualstudio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5911,8 +5911,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://packagesource": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {

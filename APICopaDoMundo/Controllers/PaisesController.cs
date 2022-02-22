@@ -2,6 +2,7 @@
 using APICopaDoMundo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace APICopaDoMundo.Controllers
 {
@@ -12,57 +13,22 @@ namespace APICopaDoMundo.Controllers
     public class PaisesController : ControllerBase
     {
 
-        private readonly Context contexto;
+        //private readonly IPaises ;
 
-        public PaisesController()
-        {
-            contexto = new Context();
-        }
-
-        //[HttpGet("obterPaisesPorConfederacao")]
-        //public ActionResult obterPaisesPorConfederacao()
+        //public PaisesController()
         //{
-        //    try
-        //    {
+        //    contexto = new Context();
+        //}
 
-        //        var paises = Paises;
-        //        return Ok();
-
-        //    }
-        //    catch
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<Paises>>> GetProdutos()
+        //{
+        //    var alunos = await _repository.ObterTodos();
+        //    if (alunos == null)
         //    {
         //        return BadRequest();
         //    }
-
-        //}
-
-        [HttpGet("obterPaises")]
-        public ActionResult ObterPaises()
-        {
-            try
-            {
-                var obterPaises = new List<Paises>();
-                return Ok(obterPaises);
-            }
-            catch
-            {
-                return BadRequest("Erro");
-            }
-
-        }
-
-
-
-
-        //[HttpDelete("remover")]
-        //public ActionResult remova(string id)
-        //{
-        //    var presultado = Context..find<Paises>(p => p.Id == id).firstordefault();
-        //    if (presultado == null) return
-        //            notfound("id não encontrado, atualizacao não realizada!");
-
-        //    context._produtos.deleteone<paises>(filter => filter.id == id);
-        //    return nocontent();
+        //    return Ok(alunos);
         //}
     }
 }
