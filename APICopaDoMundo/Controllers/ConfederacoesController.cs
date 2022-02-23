@@ -52,7 +52,7 @@ namespace APICopaDoMundo.Controllers
                 return BadRequest();
             }
 
-            _repository.Adicionar(Confederacoes);
+           // _repository.Adicionar(Confederacoes);
 
             return Ok(Confederacoes);
         }
