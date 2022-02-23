@@ -1,4 +1,6 @@
 using APICopaDoMundo.Contexto;
+using APICopaDoMundo.Interface;
+using APICopaDoMundo.Interface.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,7 +36,10 @@ namespace APICopaDoMundo
 			{
 				options.UseSqlServer(Configuration.GetConnectionString("Data Source=201.62.57.93;Initial Catalog=BD040160;User ID=RA040160"));
 			});
-			//services.AddScoped<IAlunoRepository, AlunoRepository>();
+			services.AddScoped<IPaisesRepository, PaisesRepository>();
+			services.AddScoped<IConfederacoesRepository, ConfederacoesRepository>();
+			services.AddScoped<IPotesRepository, PotesRepository>();
+			services.AddScoped<IGrupoRepository, GrupoRepository>();
 			services.AddControllers();
 		}
 

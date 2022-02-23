@@ -1,4 +1,5 @@
 ﻿using APICopaDoMundo.Contexto;
+using APICopaDoMundo.Interface;
 using APICopaDoMundo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -13,22 +14,33 @@ namespace APICopaDoMundo.Controllers
     public class PaisesController : ControllerBase
     {
 
-        //private readonly IPaises ;
+        private readonly IPaisesRepository _repository;
 
-        //public PaisesController()
-        //{
-        //    contexto = new Context();
-        //}
+        public PaisesController(IPaisesRepository repository)
+        {
+            _repository = repository;
+        }
 
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Paises>>> GetProdutos()
-        //{
-        //    var alunos = await _repository.ObterTodos();
-        //    if (alunos == null)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    return Ok(alunos);
-        //}
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Paises>>>GetPaises()
+        {
+            var paises = await _repository.ObterTodos();
+            if(paises == null)
+            {
+                return BadRequest();
+            }
+            return Ok(paises);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Paises>>> GetPaises(int id)
+        {
+            var paises = await _repository.ObterPorId(id);
+            if (paises == null)
+            {
+                return BadRequest();
+            }
+            return Ok(paises);
+        }
     }
 }

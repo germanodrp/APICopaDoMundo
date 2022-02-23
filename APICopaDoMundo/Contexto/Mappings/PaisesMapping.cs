@@ -20,26 +20,9 @@ namespace APICopaDoMundo.Contexto.Mappings
 			builder.ToTable(name: "PAISES", schema: "COPADOMUNDO");
 		}
 
-		public void Configure(EntityTypeBuilder<Confederacoes> builder)
-		{
-			builder.HasKey(c => c.Id);
-
-			builder.Property(c => c.Nome);
-			builder.Property(c => c.Sigla);
 
 
-			builder.ToTable(name: "CONFEDERACAO", schema: "COPADOMUNDO");
-		}
-
-		public void Configure(EntityTypeBuilder<Potes> builder)
-		{
-			builder.HasKey(p => p.IdPote);
-
-			builder.Property(c => c.Descricao);
-			
-
-			builder.ToTable(name: "POTE", schema: "COPADOMUNDO");
-		}
+		
 
 		
 	}

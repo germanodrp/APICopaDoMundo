@@ -9,8 +9,9 @@ namespace APICopaDoMundo.Contexto
     {
 
         public virtual DbSet<Paises> Paises { get; set; }
-        public virtual DbSet<Confederacoes> Confederacao { get; set; }
+        public virtual DbSet<Confederacoes> Confederacoes { get; set; }
         public virtual DbSet<Potes> Potes { get; set; }
+        public virtual DbSet<Grupo> Grupo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
