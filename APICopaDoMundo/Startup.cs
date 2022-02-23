@@ -32,7 +32,7 @@ namespace APICopaDoMundo
 
 			services.AddDbContext<Context>(options =>
 			{
-				options.UseSqlServer(Configuration.GetConnectionString("Data Source=Bandeira;Initial Catalog=BD040160;User ID=RA040160"));
+				options.UseSqlServer(Configuration.GetConnectionString("Data Source=201.62.57.93;Initial Catalog=BD040160;User ID=RA040160"));
 			});
 			//services.AddScoped<IAlunoRepository, AlunoRepository>();
 			services.AddControllers();
