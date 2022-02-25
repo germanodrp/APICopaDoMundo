@@ -3,6 +3,7 @@ using APICopaDoMundo.Interface;
 using APICopaDoMundo.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -20,18 +21,19 @@ namespace APICopaDoMundo.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
+        [HttpGet("obterTodos")]
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes()
         {
             var confederacoes = await _repository.ObterTodos();
             if (confederacoes == null)
             {
-                return BadRequest();
+                Console.WriteLine ("Funcionou porra");
             }
-            return Ok(confederacoes);
+            Console.WriteLine("errado porra");
+            return BadRequest();
         }
 
-        [HttpGet]
+        [HttpGet("obterTodos/{id}")]
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes(int id)
         {
             var confederacoes = await _repository.ObterPorId(id);
@@ -52,7 +54,7 @@ namespace APICopaDoMundo.Controllers
                 return BadRequest();
             }
 
-           // _repository.Adicionar(Confederacoes);
+           await _repository.Adicionar(Confederacoes);
 
             return Ok(Confederacoes);
         }
