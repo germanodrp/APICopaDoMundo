@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace APICopaDoMundo.Controllers
 {
-    [Route("api/confederacoes")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ConfederacoesController : ControllerBase
     {
@@ -20,7 +20,14 @@ namespace APICopaDoMundo.Controllers
             _repository = repository;
         }
 
+        //[HttpGet]
+        //public ActionResult ola()
+        //{
+        //    return Ok("OK");
+        //}
+
         [HttpGet]
+        [Route("obterTodos")]
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes()
         {
             var confederacoes = await _repository.ObterTodos();
@@ -31,7 +38,7 @@ namespace APICopaDoMundo.Controllers
             return Ok(confederacoes);
         }
 
-        [HttpGet]
+        [HttpGet("obterPorId/{id}")]
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes(int id)
         {
             var confederacoes = await _repository.ObterPorId(id);

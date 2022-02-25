@@ -7,6 +7,11 @@ namespace APICopaDoMundo.Contexto
 {
     public class Context:DbContext
     {
+        public Context()
+        { }
+        public Context(DbContextOptions<Context> options)
+            : base(options)
+        { }
 
         public virtual DbSet<Paises> Paises { get; set; }
         public virtual DbSet<Confederacoes> Confederacoes { get; set; }
