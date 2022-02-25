@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace APICopaDoMundo.Controllers
 {
-    [Route("api/confederacoes")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ConfederacoesController : ControllerBase
     {
@@ -21,7 +21,18 @@ namespace APICopaDoMundo.Controllers
             _repository = repository;
         }
 
+<<<<<<< HEAD
         [HttpGet("obterTodos")]
+=======
+        //[HttpGet]
+        //public ActionResult ola()
+        //{
+        //    return Ok("OK");
+        //}
+
+        [HttpGet]
+        [Route("obterTodos")]
+>>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes()
         {
             var confederacoes = await _repository.ObterTodos();
@@ -33,7 +44,11 @@ namespace APICopaDoMundo.Controllers
             return BadRequest();
         }
 
+<<<<<<< HEAD
         [HttpGet("obterTodos/{id}")]
+=======
+        [HttpGet("obterPorId/{id}")]
+>>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes(int id)
         {
             var confederacoes = await _repository.ObterPorId(id);

@@ -5,7 +5,8 @@
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:23043",
-      "sslPort": 44333
+      "sslPort": 0
+      
     }
   },
   "profiles": {
@@ -21,7 +22,11 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/confederacoes",
+<<<<<<< HEAD
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
+=======
+      "applicationUrl": "http://localhost:5000",
+>>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

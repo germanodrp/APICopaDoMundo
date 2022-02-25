@@ -51,7 +51,11 @@ namespace APICopaDoMundo
 				app.UseDeveloperExceptionPage();
 			}
 
+<<<<<<< HEAD
 			//app.UseHttpsRedirection();
+=======
+	
+>>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
 
 			app.UseRouting();
 
