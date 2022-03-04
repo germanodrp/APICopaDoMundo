@@ -34,7 +34,7 @@ namespace APICopaDoMundo
 
 			services.AddDbContext<Context>(options =>
 			{
-				options.UseSqlServer("Data Source=bandeira;Initial Catalog=BD040160;User ID=RA040160;Password=040160");
+				options.UseSqlServer("Data Source=201.62.57.93;Initial Catalog=BD040160;User ID=RA040160;Password=040160");
 			});
 			services.AddScoped<IPaisesRepository, PaisesRepository>();
 			services.AddScoped<IConfederacoesRepository, ConfederacoesRepository>();

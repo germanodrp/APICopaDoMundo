@@ -30,11 +30,11 @@ namespace APICopaDoMundo.Interface
 
         }
 
-        public async void Deletar(int id)
+        public async Task Deletar(int id)
         {
             var entity = await ObterPorId(id);
             _context.Paises.Remove(entity);
-            await _context.SaveChangesAsync();
+            await _context.Remove();
         }
 
         public async Task<Paises> ObterPorId(int id)

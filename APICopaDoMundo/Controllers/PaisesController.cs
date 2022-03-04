@@ -30,10 +30,10 @@ namespace APICopaDoMundo.Controllers
 
         [HttpGet]
         [Route("obterTodos")]
-        public async Task<ActionResult<IEnumerable<Paises>>>GetPaises()
+        public async Task<ActionResult<IEnumerable<Paises>>> GetPaises()
         {
             var paises = await _repository.ObterTodos();
-            if(paises == null)
+            if (paises == null)
             {
                 return BadRequest();
             }
@@ -41,6 +41,7 @@ namespace APICopaDoMundo.Controllers
         }
 
         [HttpGet]
+        [Route("obterPorId/{id}")]
         public async Task<ActionResult<IEnumerable<Paises>>> GetPaises(int id)
         {
             var paises = await _repository.ObterPorId(id);
@@ -50,5 +51,44 @@ namespace APICopaDoMundo.Controllers
             }
             return Ok(paises);
         }
+
+        [HttpPost]
+        [Route("adicionarPais")]
+        public async Task<ActionResult<IEnumerable<Paises>>> PostPaises(Paises paises)
+        {
+            paises = new Paises();
+
+            if (paises == null)
+            {
+                return BadRequest();
+            }
+
+            await _repository.Adicionar(paises);
+
+            return Ok(paises);
+        }
+
+
+        [HttpDelete]
+        [Route("deletarPais/{id}")]
+
+        public async Task<ActionResult<IEnumerable<Paises>>> DeletePaises(int id)
+
+
+        {
+            var deletePais = await _repository.ObterPorId(id);
+
+            if(deletePais == null)
+            {
+                return BadRequest();
+            }
+
+            await _repository.Deletar(id);
+
+            return Ok(deletePais);
+        }
+
+
+
     }
 }

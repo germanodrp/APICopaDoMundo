@@ -10,6 +10,6 @@ namespace APICopaDoMundo.Interface
         Task<Paises> ObterPorId(int id);
         Task Adicionar(Paises paises);
         Task Atualizar(Paises paises);
-        void Deletar(int id);
+        Task Deletar(int id);
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace APICopaDoMundo.Contexto
 {
@@ -25,6 +26,9 @@ namespace APICopaDoMundo.Contexto
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(Context).Assembly);
         }
 
-
+        internal Task Remove()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

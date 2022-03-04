@@ -49,7 +49,9 @@ namespace APICopaDoMundo.Controllers
 
   
 
-        [HttpGet("obterPorId/{id}")]
+        [HttpGet]
+        [Route("obterPorId/{id}")]
+
 
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes(int id)
         {

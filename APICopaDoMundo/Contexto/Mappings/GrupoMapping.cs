@@ -8,7 +8,7 @@ namespace APICopaDoMundo.Contexto.Mappings
 	{
 		public void Configure(EntityTypeBuilder<Grupo> builder)
 		{
-			builder.HasKey(g => g.Id);
+			builder.HasKey(g => g.Idgrupo);
 
 			builder.Property(g => g.Nome);
 

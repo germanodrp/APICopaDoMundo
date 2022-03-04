@@ -5,7 +5,7 @@ namespace APICopaDoMundo.Models
     public class Grupo
     {
         [Key]
-        public int Id { get; set; }
+        public int Idgrupo { get; set; }
         public string Nome { get; set; }
     }
 }
