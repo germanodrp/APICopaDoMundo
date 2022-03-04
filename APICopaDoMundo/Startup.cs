@@ -34,7 +34,7 @@ namespace APICopaDoMundo
 
 			services.AddDbContext<Context>(options =>
 			{
-				options.UseSqlServer(Configuration.GetConnectionString("Data Source=201.62.57.93;Initial Catalog=BD040160;User ID=RA040160"));
+				options.UseSqlServer("Data Source=bandeira;Initial Catalog=BD040160;User ID=RA040160;Password=040160");
 			});
 			services.AddScoped<IPaisesRepository, PaisesRepository>();
 			services.AddScoped<IConfederacoesRepository, ConfederacoesRepository>();
@@ -51,15 +51,15 @@ namespace APICopaDoMundo
 				app.UseDeveloperExceptionPage();
 			}
 
-<<<<<<< HEAD
-			//app.UseHttpsRedirection();
-=======
+
+		//	app.UseHttpsRedirection();
+
 	
->>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
+
 
 			app.UseRouting();
 
-			app.UseAuthorization();
+		//	app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{

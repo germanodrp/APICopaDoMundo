@@ -16,23 +16,25 @@ namespace APICopaDoMundo.Controllers
 
         private readonly IConfederacoesRepository _repository;
 
+      
         public ConfederacoesController(IConfederacoesRepository repository)
         {
             _repository = repository;
         }
 
-<<<<<<< HEAD
-        [HttpGet("obterTodos")]
-=======
-        //[HttpGet]
-        //public ActionResult ola()
-        //{
-        //    return Ok("OK");
-        //}
+
+
+
+        [HttpGet]
+        [Route("ola")]
+        public ActionResult ola()
+        {
+            return Ok("OK");
+        }
 
         [HttpGet]
         [Route("obterTodos")]
->>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
+
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes()
         {
             var confederacoes = await _repository.ObterTodos();
@@ -41,14 +43,14 @@ namespace APICopaDoMundo.Controllers
                 Console.WriteLine ("Funcionou porra");
             }
             Console.WriteLine("errado porra");
-            return BadRequest();
+            return Ok(confederacoes);
         }
 
-<<<<<<< HEAD
-        [HttpGet("obterTodos/{id}")]
-=======
+
+  
+
         [HttpGet("obterPorId/{id}")]
->>>>>>> 22871f42d3aa08cb50e529dbc834718a9c16e300
+
         public async Task<ActionResult<IEnumerable<Confederacoes>>> GetConfederacoes(int id)
         {
             var confederacoes = await _repository.ObterPorId(id);

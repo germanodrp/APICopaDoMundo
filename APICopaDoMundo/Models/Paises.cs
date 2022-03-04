@@ -6,10 +6,11 @@ namespace APICopaDoMundo.Models
     {
         [Key]
         public int Id { get; set; }
-        public int IdConfederacoes { get; set; }
+        public int IdConfederacao { get; set; }
         public string Nome { get; set; }
         public int RankingFifa { get; set; }
         public bool Sede { get; set; }
+        public Confederacoes Confederacoes { get; set; }
 
     }
 }

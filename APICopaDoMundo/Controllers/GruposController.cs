@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace APICopaDoMundo.Controllers
 {
-    [Route("api/grupos")]
+    [Route("api/[controller]")]
     [ApiController]
     public class GruposController : ControllerBase
     {
@@ -17,6 +17,13 @@ namespace APICopaDoMundo.Controllers
         public GruposController(IGrupoRepository repository)
         {
             _repository = repository;
+        }
+
+        [HttpGet]
+        [Route("ola")]
+        public ActionResult ola()
+        {
+            return Ok("OK");
         }
 
         [HttpGet]

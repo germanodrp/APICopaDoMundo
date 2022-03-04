@@ -9,7 +9,7 @@ namespace APICopaDoMundo.Controllers
 {
 
 
-    [Route("api/paisescontroller")]
+    [Route("api/[controller]")]
     [ApiController]
     public class PaisesController : ControllerBase
     {
@@ -22,6 +22,14 @@ namespace APICopaDoMundo.Controllers
         }
 
         [HttpGet]
+        [Route("ola")]
+        public ActionResult ola()
+        {
+            return Ok("OKKKKKK");
+        }
+
+        [HttpGet]
+        [Route("obterTodos")]
         public async Task<ActionResult<IEnumerable<Paises>>>GetPaises()
         {
             var paises = await _repository.ObterTodos();

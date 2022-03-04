@@ -13,10 +13,14 @@ namespace APICopaDoMundo.Contexto.Mappings
 			builder.HasKey(p => p.Id);
 
 			builder.Property(c => c.Nome);
-			builder.Property(c => c.IdConfederacoes);
+			builder.Property(c => c.IdConfederacao);
 			builder.Property(c => c.RankingFifa);
 			builder.Property(c => c.Sede);
 
+			builder.HasOne(p => p.Confederacoes)
+				.WithMany()
+				.HasForeignKey(p => p.IdConfederacao);
+		
 			builder.ToTable(name: "PAISES", schema: "COPADOMUNDO");
 		}
 

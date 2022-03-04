@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace APICopaDoMundo.Controllers
 {
-    [Route("api/potes")]
+    [Route("api/[controller]")]
     [ApiController]
     public class PotesController : ControllerBase
     {
