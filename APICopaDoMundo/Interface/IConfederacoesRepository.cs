@@ -10,6 +10,6 @@ namespace APICopaDoMundo.Interface
         Task<Confederacoes> ObterPorId(int id);
         Task Adicionar(Confederacoes confederacoes);
         Task Atualizar(Confederacoes confederacoes);
-        void Deletar(int id);
+        Task Deletar(int id);
     }
 }

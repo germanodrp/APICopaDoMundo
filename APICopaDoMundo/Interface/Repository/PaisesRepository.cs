@@ -34,7 +34,7 @@ namespace APICopaDoMundo.Interface
         {
             var entity = await ObterPorId(id);
             _context.Paises.Remove(entity);
-            await _context.Remove();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Paises> ObterPorId(int id)

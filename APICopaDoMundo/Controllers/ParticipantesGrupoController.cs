@@ -61,23 +61,25 @@ namespace APICopaDoMundo.Controllers
             return Ok(participantesGrupo);
         }
 
+       
+
         [HttpDelete]
         [Route("deletarPais/{id}")]
 
-        public async Task<ActionResult<IEnumerable<ParticipantesGrupo>>> DeleteParticipante(int id)
+        public async Task<ActionResult<IEnumerable<Paises>>> DeleteParticipantesGrupo(int id)
 
 
         {
-            var deleteParticipante = await _repository.ObterPorId(id);
+            var deletePais = await _repository.ObterPorId(id);
 
-            if (deleteParticipante == null)
+            if (deletePais == null)
             {
                 return BadRequest();
             }
 
             await _repository.Deletar(id);
 
-            return Ok(deleteParticipante);
+            return Ok("Participante removido com sucesso!");
         }
 
 

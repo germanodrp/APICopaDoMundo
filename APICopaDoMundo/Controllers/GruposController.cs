@@ -49,5 +49,24 @@ namespace APICopaDoMundo.Controllers
             }
             return Ok(grupos);
         }
+
+        [HttpDelete]
+        [Route("deletarGrupo/{id}")]
+
+        public async Task<ActionResult<IEnumerable<Grupo>>> DeleteGrupo(int id)
+
+
+        {
+            var deleteGrupo = await _repository.ObterPorId(id);
+
+            if (deleteGrupo == null)
+            {
+                return BadRequest();
+            }
+
+            await _repository.Deletar(id);
+
+            return Ok("Grupo removido com sucesso!");
+        }
     }
 }

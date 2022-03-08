@@ -78,5 +78,24 @@ namespace APICopaDoMundo.Controllers
             return Ok(Confederacoes);
         }
 
+
+        [HttpDelete]
+        [Route("deletarConfederacoes/{id}")]
+
+        public async Task<ActionResult<IEnumerable<Confederacoes>>> Deleteconfederacoes(int id)
+
+
+        {
+            var deleteConfederacoes = await _repository.ObterPorId(id);
+
+            if (deleteConfederacoes == null)
+            {
+                return BadRequest();
+            }
+
+            await _repository.Deletar(id);
+
+            return Ok("Confederacoes removido com sucesso!");
+        }
     }
 }

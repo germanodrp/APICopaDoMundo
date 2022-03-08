@@ -10,6 +10,6 @@ namespace APICopaDoMundo.Interface
         Task<Grupo> ObterPorId(int id);
         Task Adicionar(Grupo grupo);
         Task Atualizar(Grupo grupo);
-        void Deletar(int id);
+        Task Deletar(int id);
     }
 }

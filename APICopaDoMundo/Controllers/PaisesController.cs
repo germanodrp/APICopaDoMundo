@@ -56,7 +56,6 @@ namespace APICopaDoMundo.Controllers
         [Route("adicionarPais")]
         public async Task<ActionResult<IEnumerable<Paises>>> PostPaises(Paises paises)
         {
-            paises = new Paises();
 
             if (paises == null)
             {
@@ -66,6 +65,25 @@ namespace APICopaDoMundo.Controllers
             await _repository.Adicionar(paises);
 
             return Ok(paises);
+        }
+
+        [HttpPut]
+        [Route("AtualizarPais/{id}")]
+
+        public async Task<ActionResult<IEnumerable<Paises>>> AtualizarPaises(Paises paises,int id)
+
+
+        {
+            var AtualizarPais = await _repository.ObterPorId(id);
+
+            if (AtualizarPais == null)
+            {
+                return BadRequest();
+            }
+
+            await _repository.Atualizar(paises);
+
+            return Ok("Pais removido com sucesso!");
         }
 
 
@@ -85,7 +103,7 @@ namespace APICopaDoMundo.Controllers
 
             await _repository.Deletar(id);
 
-            return Ok(deletePais);
+            return Ok("Pais removido com sucesso!");
         }
 
 

@@ -30,7 +30,7 @@ namespace APICopaDoMundo.Interface.Repository
 
         }
 
-        public async void Deletar(int id)
+        public async Task Deletar(int id)
         {
             var entity = await ObterPorId(id);
             _context.Grupo.Remove(entity);

@@ -27,7 +27,7 @@ namespace APICopaDoMundo.Interface
             await _context.SaveChangesAsync();
         }
 
-        public async void Deletar(int id)
+        public async Task Deletar(int id)
         {
             var entity = await ObterPorId(id);
             _context.Confederacoes.Remove(entity);

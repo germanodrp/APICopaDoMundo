@@ -27,9 +27,9 @@ namespace APICopaDoMundo.Contexto
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(Context).Assembly);
         }
 
-        internal Task Remove()
-        {
-            throw new NotImplementedException();
-        }
+        //internal Task Remove()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
