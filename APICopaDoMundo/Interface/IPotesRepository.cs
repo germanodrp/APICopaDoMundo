@@ -10,6 +10,6 @@ namespace APICopaDoMundo.Interface
         Task<Potes> ObterPorId(int id);
         Task Adicionar(Potes potes);
         Task Atualizar(Potes potes);
-        void Deletar(int id);
+        Task Deletar(int id);
     }
 }

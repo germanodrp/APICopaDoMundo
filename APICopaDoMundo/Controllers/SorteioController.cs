@@ -18,17 +18,17 @@ namespace APICopaDoMundo.Controllers
         {
             contexto = new Context();
         }
-        public ActionResult Sortear(int Id)
-        {
-            List<Paises> TimesSorteados = new List<Paises>();
+        //public ActionResult Sortear(int Id)
+        //{
+        //    List<Paises> TimesSorteados = new List<Paises>();
    
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
         public ActionResult Sorteio()
         {
             var dataContext = new Context();
-            //select * from Grupo Where nome = 'Grupo A'
+            //select * from Paises Where Sede = 'True'
             var paisSede = dataContext.Paises.Where( p => p.Sede == true).First();
             //select * from Grupo Where nome = 'Grupo A'
             var GrupoA = dataContext.Grupo.Where(g => g.Nome == "Grupo A").First();
@@ -42,12 +42,11 @@ namespace APICopaDoMundo.Controllers
             };
             dataContext.ParticipantesGrupos.Add(participanteSede);
 
-            dataContext.Potes.Remove(
-
-
+            //dataContext.Potes.Remove();
 
                 return Ok();
         }
+        
 
     }
 }

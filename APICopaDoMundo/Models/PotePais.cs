@@ -10,6 +10,8 @@ namespace APICopaDoMundo.Models
 
         public int IdPais { get; set; }
 
-        public Potes potes { get; set; }
+        public Potes Potes { get; set; }
+
+        public Paises Pais { get; set; }
     }
 }

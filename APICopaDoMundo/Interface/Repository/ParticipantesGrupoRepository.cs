@@ -34,7 +34,8 @@ namespace APICopaDoMundo.Interface.Repository
         public async Task Deletar(int id)
         {
             var entity = await ObterPorId(id);
-             _context.ParticipantesGrupos.Remove(entity);
+            _context.ParticipantesGrupos.Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<ParticipantesGrupo> ObterPorId(int id)
