@@ -21,6 +21,7 @@ namespace APICopaDoMundo.Contexto
         public virtual DbSet<Potes> Potes { get; set; }
         public virtual DbSet<Grupo> Grupo { get; set; }
         public virtual DbSet<ParticipantesGrupo> ParticipantesGrupos { get; set; }
+        public virtual DbSet<PotePais> PotePais { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

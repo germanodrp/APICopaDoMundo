@@ -83,7 +83,7 @@ namespace APICopaDoMundo.Controllers
 
             await _repository.Atualizar(paises);
 
-            return Ok("Pais removido com sucesso!");
+            return Ok("Pais atualizado com sucesso!");
         }
 
 
