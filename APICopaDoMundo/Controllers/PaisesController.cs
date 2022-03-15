@@ -70,7 +70,7 @@ namespace APICopaDoMundo.Controllers
         [HttpPut]
         [Route("AtualizarPais/{id}")]
 
-        public async Task<ActionResult<IEnumerable<Paises>>> AtualizarPaises(Paises paises,int id)
+        public async Task<ActionResult<IEnumerable<Paises>>> AtualizarPaises(Paises paises, int id)
 
 
         {
@@ -96,7 +96,7 @@ namespace APICopaDoMundo.Controllers
         {
             var deletePais = await _repository.ObterPorId(id);
 
-            if(deletePais == null)
+            if (deletePais == null)
             {
                 return BadRequest();
             }

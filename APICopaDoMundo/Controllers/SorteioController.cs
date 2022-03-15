@@ -42,9 +42,25 @@ namespace APICopaDoMundo.Controllers
             };
             dataContext.ParticipantesGrupos.Add(participanteSede);
 
-            //dataContext.Potes.Remove();
+            var pote = dataContext.Potes.Where(p => p.IdPote == 1).FirstOrDefault();
 
-                return Ok();
+            var potePaisSede = new PotePais()
+            {
+                IdPais = paisSede.Id,
+                IdPote = pote.IdPote        
+            };
+
+           dataContext.PotePais.Remove(potePaisSede);
+
+            //buscar alguem do pote 2
+            //participante
+            //add esse alguem no grupo a
+            //dataContext.ParticipantesGrupos.Add(participante2);
+            //buscar o id do pote 2
+            //remover do pote 2
+
+
+            return Ok();
         }
         
 
