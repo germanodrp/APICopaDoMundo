@@ -31,7 +31,7 @@ namespace APICopaDoMundo.Controllers
             //select * from Paises Where Sede = 'True'
             var paisSede = dataContext.Paises.Where( p => p.Sede == true).First();
             //select * from Grupo Where nome = 'Grupo A'
-            var GrupoA = dataContext.Grupo.Where(g => g.Nome == "Grupo A").First();
+            var GrupoA = dataContext.Grupo.Where(g => g.Nome == "GrupoA").First();
 
 
             //adicionar ele no grupo A na posicao 1
@@ -51,6 +51,31 @@ namespace APICopaDoMundo.Controllers
             };
 
            dataContext.PotePais.Remove(potePaisSede);
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+            var dataContext2 = new Context();
+
+            var paisNaoSede = dataContext2.Paises.Where(p => p.Sede == false).First();
+
+            var GrupoB = dataContext2.Grupo.Where(g => g.Nome == "GrupoB").First();
+
+            var participantePais = new ParticipantesGrupo()
+            {
+                IdGrupo = GrupoB.Idgrupo,
+                Id = paisNaoSede.Id
+            };
+
+            dataContext2.ParticipantesGrupos.Add(participantePais);
+
+            var pote2 = dataContext2.Potes.Where(p => p.IdPote == 2).First();
+
+            var potePaisNaoSede = new PotePais()
+            {
+                IdPais = paisNaoSede.Id,
+                IdPote = pote2.IdPote
+            };
+
+            dataContext2.PotePais.Remove(potePaisNaoSede);
 
             //buscar alguem do pote 2
             //participante
@@ -58,6 +83,11 @@ namespace APICopaDoMundo.Controllers
             //dataContext.ParticipantesGrupos.Add(participante2);
             //buscar o id do pote 2
             //remover do pote 2
+            ////////////////////////////////////////////////////////////////////////////////////////////////
+            
+
+
+
 
 
             return Ok();
