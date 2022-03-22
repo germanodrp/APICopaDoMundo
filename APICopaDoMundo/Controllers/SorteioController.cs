@@ -84,9 +84,58 @@ namespace APICopaDoMundo.Controllers
             //buscar o id do pote 2
             //remover do pote 2
             ////////////////////////////////////////////////////////////////////////////////////////////////
-            
 
 
+            var dataContext3 = new Context();
+
+            var paisNaoSede2 = dataContext3.Paises.Where(p => p.Sede == false).First();
+
+            var GrupoC = dataContext3.Grupo.Where(g => g.Nome == "GrupoC").First();
+
+            var participantePais2 = new ParticipantesGrupo()
+            {
+                IdGrupo = GrupoC.Idgrupo,
+                Id = paisNaoSede2.Id
+            };
+
+            dataContext3.ParticipantesGrupos.Add(participantePais2);
+
+            var pote3 = dataContext3.Potes.Where(p => p.IdPote == 3).First();
+
+            var potePaisNaoSede2 = new PotePais()
+            {
+                IdPais = paisNaoSede2.Id,
+                IdPote = pote3.IdPote
+            };
+
+            dataContext3.PotePais.Remove(potePaisNaoSede2);
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            var dataContext4 = new Context();
+
+            var paisNaoSede3 = dataContext4.Paises.Where(p => p.Sede == false).First();
+
+            var GrupoD = dataContext4.Grupo.Where(g => g.Nome == "GrupoD").First();
+
+            var participantePais3 = new ParticipantesGrupo()
+            {
+                IdGrupo = GrupoD.Idgrupo,
+                Id = paisNaoSede3.Id
+            };
+
+            dataContext3.ParticipantesGrupos.Add(participantePais3);
+
+            var pote4 = dataContext4.Potes.Where(p => p.IdPote == 4).First();
+
+            var potePaisNaoSede3 = new PotePais()
+            {
+                IdPais = paisNaoSede3.Id,
+                IdPote = pote4.IdPote
+            };
+
+            dataContext3.PotePais.Remove(potePaisNaoSede3);
 
 
 

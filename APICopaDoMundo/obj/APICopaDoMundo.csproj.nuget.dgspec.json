@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {}
+    "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {
+    "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+        "projectUniqueName": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
         "projectName": "APICopaDoMundo",
-        "projectPath": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
-        "packagesPath": "C:\\Users\\lojs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lojs\\source\\repos\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\obj\\",
+        "projectPath": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+        "packagesPath": "C:\\Users\\visualstudio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lojs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\visualstudio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -78,8 +77,20 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[3.1.21, 3.1.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
