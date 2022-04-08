@@ -24,12 +24,22 @@ namespace APICopaDoMundo.Controllers
    
         //    return Ok();
         //}
-
-        public ActionResult Sorteio()
+        [HttpPost]
+        [Route("Sortear")]
+        public ActionResult Sortear()
         {
-            var dataContext = new Context();
-            //select * from Paises Where Sede = 'True'
-            var paisSede = dataContext.Paises.Where( p => p.Sede == true).First();
+            if (ExistePaisPote(contexto, 1))
+            {
+                SorteioCabecasDeChave(contexto);
+            }
+           
+            return Ok("Pais Sorteado Com Sucesso");
+        }
+        
+        private void SorteioPaisSede(Context dataContext)
+        {
+
+            var paisSede = dataContext.Paises.Where(p => p.Sede == true).First();
             //select * from Grupo Where nome = 'Grupo A'
             var GrupoA = dataContext.Grupo.Where(g => g.Nome == "GrupoA").First();
 
@@ -47,101 +57,43 @@ namespace APICopaDoMundo.Controllers
             var potePaisSede = new PotePais()
             {
                 IdPais = paisSede.Id,
-                IdPote = pote.IdPote        
+                IdPote = pote.IdPote
             };
 
-           dataContext.PotePais.Remove(potePaisSede);
-/////////////////////////////////////////////////////////////////////////////////////////////////
-
-            var dataContext2 = new Context();
-
-            var paisNaoSede = dataContext2.Paises.Where(p => p.Sede == false).First();
-
-            var GrupoB = dataContext2.Grupo.Where(g => g.Nome == "GrupoB").First();
-
-            var participantePais = new ParticipantesGrupo()
-            {
-                IdGrupo = GrupoB.Idgrupo,
-                Id = paisNaoSede.Id
-            };
-
-            dataContext2.ParticipantesGrupos.Add(participantePais);
-
-            var pote2 = dataContext2.Potes.Where(p => p.IdPote == 2).First();
-
-            var potePaisNaoSede = new PotePais()
-            {
-                IdPais = paisNaoSede.Id,
-                IdPote = pote2.IdPote
-            };
-
-            dataContext2.PotePais.Remove(potePaisNaoSede);
-
-            //buscar alguem do pote 2
-            //participante
-            //add esse alguem no grupo a
-            //dataContext.ParticipantesGrupos.Add(participante2);
-            //buscar o id do pote 2
-            //remover do pote 2
-            ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-            var dataContext3 = new Context();
-
-            var paisNaoSede2 = dataContext3.Paises.Where(p => p.Sede == false).First();
-
-            var GrupoC = dataContext3.Grupo.Where(g => g.Nome == "GrupoC").First();
-
-            var participantePais2 = new ParticipantesGrupo()
-            {
-                IdGrupo = GrupoC.Idgrupo,
-                Id = paisNaoSede2.Id
-            };
-
-            dataContext3.ParticipantesGrupos.Add(participantePais2);
-
-            var pote3 = dataContext3.Potes.Where(p => p.IdPote == 3).First();
-
-            var potePaisNaoSede2 = new PotePais()
-            {
-                IdPais = paisNaoSede2.Id,
-                IdPote = pote3.IdPote
-            };
-
-            dataContext3.PotePais.Remove(potePaisNaoSede2);
-
-            ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-            var dataContext4 = new Context();
-
-            var paisNaoSede3 = dataContext4.Paises.Where(p => p.Sede == false).First();
-
-            var GrupoD = dataContext4.Grupo.Where(g => g.Nome == "GrupoD").First();
-
-            var participantePais3 = new ParticipantesGrupo()
-            {
-                IdGrupo = GrupoD.Idgrupo,
-                Id = paisNaoSede3.Id
-            };
-
-            dataContext3.ParticipantesGrupos.Add(participantePais3);
-
-            var pote4 = dataContext4.Potes.Where(p => p.IdPote == 4).First();
-
-            var potePaisNaoSede3 = new PotePais()
-            {
-                IdPais = paisNaoSede3.Id,
-                IdPote = pote4.IdPote
-            };
-
-            dataContext3.PotePais.Remove(potePaisNaoSede3);
-
-
-
-            return Ok();
+            dataContext.PotePais.Remove(potePaisSede);
         }
-        
+        private void SorteioCabecasDeChave(Context dataContext)
+        {
+            var paisesPote1 = dataContext.PotePais.Where(p => p.IdPote == 1);
 
+            if(paisesPote1.Count() == 8)
+            {
+                SorteioPaisSede(contexto);
+            }
+            else
+            {
+                var GrupoA = dataContext.Grupo.Where(g => g.Nome == "GrupoA").First();
+
+                Random random = new Random();
+
+                var paisCabecaChave = dataContext.PotePais.OrderBy(p => p.IdPais * random.Next()).First();
+                //existe no grupo algum pais da minha mesma confederacao 
+
+                var participanteCabecaChave = new ParticipantesGrupo()
+                {
+                    IdGrupo = GrupoA.Idgrupo,
+                    Id = paisCabecaChave.IdPais
+                };
+                dataContext.ParticipantesGrupos.Add(participanteCabecaChave);
+
+                dataContext.PotePais.Remove(paisCabecaChave);
+            }
+   
+        }
+
+        private bool ExistePaisPote(Context dataContext, int idPote)
+        {
+            return  dataContext.PotePais.Where(p => p.IdPote == idPote).Count() > 0;
+        }
     }
 }

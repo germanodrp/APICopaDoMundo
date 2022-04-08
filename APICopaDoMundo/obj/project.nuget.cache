@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aCTm4EpZGYuVTUHtUjCp1L2+YevGwhkQclzH94tbbKyypS7KYkCGmUhIL9fBpR4cO5zt4A0foldxzDDzX9C6ng==",
+  "dgSpecHash": "S2h0JYT8ZQvJPDkJFlN08t39JKh05ZGrRMq+cNTiLr03ljoEAOerdRfhdXMg0CDfX7NxkxiMuCrxy0Qrdj+oww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+  "projectFilePath": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\visualstudio\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\visualstudio\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
@@ -115,10 +115,7 @@
     "C:\\Users\\visualstudio\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\visualstudio\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\visualstudio\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\visualstudio\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512",
-    "C:\\Users\\visualstudio\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\visualstudio\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\visualstudio\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\visualstudio\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
   ],
   "logs": []
 }

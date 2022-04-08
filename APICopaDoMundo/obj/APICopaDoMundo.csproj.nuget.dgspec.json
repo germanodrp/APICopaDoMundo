@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {}
+    "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {
+    "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+        "projectUniqueName": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
         "projectName": "APICopaDoMundo",
-        "projectPath": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
+        "projectPath": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\APICopaDoMundo.csproj",
         "packagesPath": "C:\\Users\\visualstudio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\visualstudio\\Desktop\\TrCopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\obj\\",
+        "outputPath": "C:\\Users\\visualstudio\\Desktop\\CopaDoMundo\\APICopaDoMundo\\APICopaDoMundo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\visualstudio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,20 +77,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.21, 3.1.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
+              "version": "[3.1.23, 3.1.23]"
             }
           ],
           "frameworkReferences": {
@@ -101,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
